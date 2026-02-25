@@ -509,6 +509,54 @@
       color: var(--text-light);
       text-align: center;
     }
+    .price-cta-card {
+      margin-top: 2.5rem;
+      background: var(--primary);
+      border-radius: 18px;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .price-cta-card .cta-text {
+      font-size: 1.1rem;
+      color: #fff;
+      font-weight: 500;
+    }
+    .price-cta-card .cta-text span {
+      display: block;
+      font-size: .9rem;
+      color: rgba(255,255,255,.75);
+      margin-top: .3rem;
+      font-weight: 400;
+    }
+    .price-cta-card .price-cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: background .3s, transform .3s;
+      flex-shrink: 0;
+    }
+    .price-cta-card .price-cta-btn:hover {
+      background: #e8eaed;
+      transform: translateY(-2px);
+    }
+    @media (max-width: 600px) {
+      .price-cta-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+      }
+    }
 
     @media (max-width: 600px) {
       .price-table th, .price-table td { padding: 12px 14px; font-size: .85rem; }
@@ -937,7 +985,10 @@
             <tr><td>Замена масла в двигателе</td><td>от 1 200 ₽</td></tr>
           </tbody>
         </table>
-        <p class="price-note">* Точная стоимость определяется после диагностики. Запчасти оплачиваются отдельно.</p>
+        <div class="price-cta-card">
+          <div class="cta-text">Нужна точная стоимость?<span>Запишитесь на бесплатную диагностику — определим объём работ</span></div>
+          <a href="#brief" class="price-cta-btn">Записаться на диагностику</a>
+        </div>
       </div>
     </div>
   </section>
